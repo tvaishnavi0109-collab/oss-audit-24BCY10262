@@ -1,79 +1,106 @@
-# LINUX_VaishnaviTiwari
-qwerty
-# Open Source Audit Project
+# OSS Audit Project – Linux Shell Script Analysis
 
-**Student Name:** Vaishnavi Tiwari  
-**Registration Number:** 24BCY10262 
-**Course:** Open Source Software  
-**Chosen Software:** Python  
+**Student Name:** Vaishnavi Tiwari
+**Course:** Open Source Software Systems
+**Project Type:** Linux Environment Audit using Shell Scripts
 
 ---
 
-# Project Description
-This repository contains five Linux shell scripts created for the Open Source Audit project.  
-The scripts demonstrate basic Linux automation and shell scripting concepts such as variables, loops, conditionals, command substitution, and file handling.
+## Project Overview
 
-The chosen open-source software for this project is **Python**, a widely used programming language known for its simplicity and strong open-source community.
+This project demonstrates the use of **Bash shell scripting** to analyze and interact with a Linux system.
+The goal is to explore how open-source operating systems provide transparency and control through command-line tools.
 
----
+Five different scripts were developed to inspect various aspects of the system such as system identity, installed software, disk usage, log analysis, and open-source philosophy generation.
 
-# Scripts Included
+These scripts showcase fundamental Linux concepts including:
 
-## Script 1 – System Identity Report
-Displays important system information such as:
-- Linux distribution name
-- Kernel version
-- Logged-in user
-- Home directory
-- System uptime
-- Current date and time
-- Open source license message
-
-Concepts used: variables, echo, command substitution.
+* command substitution
+* loops
+* conditional statements
+* file handling
+* user interaction
 
 ---
 
-## Script 2 – FOSS Package Inspector
-Checks whether a given open source package is installed on the system and prints:
-- Package version
-- License
-- Description
+## Repository Contents
 
-Concepts used: if-then-else, case statement, dpkg and grep.
+Scripts included in this repository:
 
----
-
-## Script 3 – Disk and Permission Auditor
-Loops through important Linux directories and prints:
-- Directory permissions
-- Owner and group
-- Disk usage
-
-Concepts used: for loop, ls, du, awk.
+| Script          | Purpose                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| **Scripts1.sh** | Displays system identity including hostname, OS, kernel version, uptime, and current user. |
+| **Scripts2.sh** | Checks if a specific package is installed and prints information about it.                 |
+| **Scripts3.sh** | Audits important system directories to show their permissions, owner, and disk usage.      |
+| **Scripts4.sh** | Analyzes a Linux log file to detect occurrences of a keyword such as "error".              |
+| **Scripts5.sh** | Interactively generates a personalized open-source manifesto and saves it to a file.       |
 
 ---
 
-## Script 4 – Log File Analyzer
-Reads a log file and counts the number of lines containing a specific keyword such as **error** or **warning**.
+## How to Run the Scripts
 
-Concepts used: while loop, if statement, command line arguments.
+Make the scripts executable:
+
+```
+chmod +x Scripts1.sh Scripts2.sh Scripts3.sh Scripts4.sh Scripts5.sh
+```
+
+Run the scripts using:
+
+```
+./Scripts1.sh
+./Scripts2.sh
+./Scripts3.sh
+./Scripts4.sh /var/log/dpkg.log
+./Scripts5.sh
+```
 
 ---
 
-## Script 5 – Open Source Manifesto Generator
-An interactive script that asks the user three questions and generates a personalized open source philosophy statement.
+## Script Descriptions
 
-Concepts used: read input, string concatenation, writing to files, date command.
+### Script 1 – System Identity Report
+
+This script introduces the Linux environment by displaying key system information such as hostname, operating system details, kernel version, uptime, and the current logged-in user. It acts like a welcome screen that summarizes the identity of the system.
+
+### Script 2 – FOSS Package Inspector
+
+This script checks whether a selected open-source software package is installed on the system. If found, it retrieves package details and prints a description explaining the software's purpose.
+
+### Script 3 – Disk and Permission Auditor
+
+This script audits several important Linux directories and reports their disk usage, owner, group, and permission settings. It uses a loop to analyze multiple directories automatically.
+
+### Script 4 – Log File Analyzer
+
+This script reads a system log file and searches for a specific keyword such as "error". It counts the occurrences of the keyword and displays the most recent matching log entries.
+
+### Script 5 – Open Source Manifesto Generator
+
+This script interacts with the user by asking questions about their views on open-source software. Based on the responses, it generates a personalized manifesto and saves it as a text file.
 
 ---
 
-# How to Run the Scripts
+## Learning Outcomes
 
-1. Give execute permission
+Through this project the following Linux concepts were explored:
 
-```bash
-chmod +x script1.sh
-chmod +x script2.sh
-chmod +x script3.sh
-chmod +x script4.sh
-chmod +x script5.sh
+* Bash scripting fundamentals
+* Conditional statements and loops
+* System monitoring commands
+* File input and output
+* Linux log analysis
+* Interactive scripting
+
+---
+
+## Conclusion
+
+This project demonstrates how shell scripting can be used to automate system inspection and analysis tasks in Linux. It also highlights the philosophy of open-source software, emphasizing transparency, collaboration, and innovation.
+
+---
+
+## Author
+
+**Vaishnavi Tiwari**
+
