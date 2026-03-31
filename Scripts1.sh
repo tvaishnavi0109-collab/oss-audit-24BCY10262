@@ -1,34 +1,40 @@
-```bash
 #!/bin/bash
-# Script 1: System Identity Report
+
+# Script 1: System Identity
 # Name: Vaishnavi Tiwari
-# Description: Displays system information like OS, user, uptime, and license.
+# Description: Displays system information of the Linux environment.
 
-# Variables
-STUDENT_NAME="Vaishnavi Tiwari"
-SOFTWARE_CHOICE="Python"
+echo "=============================="
+echo "        SYSTEM IDENTITY       "
+echo "=============================="
 
-# System information
-DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d '"' -f2)
-KERNEL=$(uname -r)
-USER_NAME=$(whoami)
-HOME_DIR=$HOME
-UPTIME=$(uptime -p)
-DATE_TIME=$(date)
+echo "Hostname:"
+hostname
 
-# Display output
-echo "======================================="
-echo "        Open Source Audit Report       "
-echo "======================================="
-echo "Student Name : $Vaishnavi_Tiwari"
-echo "Chosen Software : $SOFTWARE_CHOICE"
-echo "---------------------------------------"
-echo "Linux Distribution : $DISTRO"
-echo "Kernel Version     : $KERNEL"
-echo "Logged in User     : $USER_NAME"
-echo "Home Directory     : $HOME_DIR"
-echo "System Uptime      : $UPTIME"
-echo "Current Date/Time  : $DATE_TIME"
-echo "---------------------------------------"
-echo "License: Linux kernel is distributed under the GNU General Public License (GPL)."
+echo ""
+
+echo "Current User:"
+whoami
+
+echo ""
+
+echo "Operating System:"
+uname -a
+
+echo ""
+
+echo "Kernel Version:"
+uname -r
+
+echo ""
+
+echo "System Uptime:"
+uptime
+
+echo ""
+
+echo "Current Date and Time:"
+date
+
+echo "==============================""License: Linux kernel is distributed under the GNU General Public License (GPL)."
 echo "======================================="
